@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
           }
           form.reset();
         } else {
-          alert('Something went wrong submitting the form. Please email us directly at alex@calibercollegeconsulting.com.');
+          alert('Something went wrong submitting the form. Please email us directly at alex@amcollegeconsulting.com.');
         }
       }).catch(function () {
-        alert('Something went wrong submitting the form. Please email us directly at alex@calibercollegeconsulting.com.');
+        alert('Something went wrong submitting the form. Please email us directly at alex@amcollegeconsulting.com.');
       });
     });
   }
