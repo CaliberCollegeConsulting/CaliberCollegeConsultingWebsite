@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amcollegeconsulting.com/sitemap.xml
