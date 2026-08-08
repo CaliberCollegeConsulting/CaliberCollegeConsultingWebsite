@@ -7,6 +7,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  var dropdownToggle = document.querySelector('.nav-dropdown > a');
+  if (dropdownToggle) {
+    dropdownToggle.addEventListener('click', function (e) {
+      if (window.innerWidth <= 860) {
+        e.preventDefault();
+        this.parentElement.classList.toggle('open');
+      }
+    });
+  }
+
   var form = document.querySelector('.contact-form');
   if (form) {
     form.addEventListener('submit', function (e) {
