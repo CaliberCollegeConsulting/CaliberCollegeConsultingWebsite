@@ -615,7 +615,21 @@ var SESSIONS = [
   { d: "2026-11-06", c: "Alberta", s: "VA", t: "VACRAO Transfer College Fair", o: "Hampden-Sydney College", m: "9:30 AM", u: "https://admission.hsc.edu/portal/travel" },
   { d: "2026-11-11", c: "Lynchburg", s: "VA", t: "Central Virginia Community College Transfer Fair", o: "Hampden-Sydney College", m: "1:30 PM", u: "https://admission.hsc.edu/portal/travel" },
   { d: "2026-10-04", c: "Westchester", s: "NY", t: "Westchester, NY Information Session", o: "American University", m: "2:00 PM ET · Westchester Marriott", u: "https://events.blackthorn.io/en/7Q9iTzx7/g/8hh8vHteMS?category=UINF" },
-  { d: "2026-10-11", c: "Boston", s: "MA", t: "Boston Information Session", o: "American University", m: "2:00 PM ET · Boston Marriott Newton", u: "https://events.blackthorn.io/en/7Q9iTzx7/g/8hh8vHteMS?category=UINF" }
+  { d: "2026-10-11", c: "Boston", s: "MA", t: "Boston Information Session", o: "American University", m: "2:00 PM ET · Boston Marriott Newton", u: "https://events.blackthorn.io/en/7Q9iTzx7/g/8hh8vHteMS?category=UINF" },
+  { d: "2026-09-09", c: "Chicago", s: "IL", t: "Notre Dame on the Road - Chicago", o: "University of Notre Dame", m: "7:15 PM", u: "https://enrollment.nd.edu/portal/ndontheroad" },
+  { d: "2026-09-29", c: "Danvers", s: "MA", t: "Notre Dame on the Road - Danvers", o: "University of Notre Dame", m: "7:00 PM", u: "https://enrollment.nd.edu/portal/ndontheroad" },
+  { d: "2026-09-10", c: "Saint Paul", s: "MN", t: "Notre Dame on the Road - St. Paul", o: "University of Notre Dame", m: "7:00 PM", u: "https://enrollment.nd.edu/portal/ndontheroad" },
+  { d: "2026-09-15", c: "Minneapolis", s: "MN", t: "Notre Dame on the Road - Minneapolis", o: "University of Notre Dame", m: "7:00 PM", u: "https://enrollment.nd.edu/portal/ndontheroad" },
+  { d: "2026-09-14", c: "Richland", s: "NJ", t: "Notre Dame on the Road - South Jersey", o: "University of Notre Dame", m: "7:00 PM", u: "https://enrollment.nd.edu/portal/ndontheroad" },
+  { d: "2026-10-05", c: "Lincroft", s: "NJ", t: "Notre Dame on the Road - Jersey Shore", o: "University of Notre Dame", m: "7:00 PM", u: "https://enrollment.nd.edu/portal/ndontheroad" },
+  { d: "2026-10-19", c: "Morristown", s: "NJ", t: "Notre Dame on the Road - Morris County", o: "University of Notre Dame", m: "7:00 PM", u: "https://enrollment.nd.edu/portal/ndontheroad" },
+  { d: "2026-09-28", c: "Rye", s: "NY", t: "Notre Dame on the Road - Westchester County", o: "University of Notre Dame", m: "7:00 PM", u: "https://enrollment.nd.edu/portal/ndontheroad" },
+  { d: "2026-10-14", c: "Syracuse", s: "NY", t: "Notre Dame on the Road - Syracuse", o: "University of Notre Dame", m: "7:00 PM", u: "https://enrollment.nd.edu/portal/ndontheroad" },
+  { d: "2026-10-15", c: "Buffalo", s: "NY", t: "Notre Dame on the Road - Buffalo", o: "University of Notre Dame", m: "7:00 PM", u: "https://enrollment.nd.edu/portal/ndontheroad" },
+  { d: "2026-09-22", c: "Providence", s: "RI", t: "Notre Dame on the Road - Providence", o: "University of Notre Dame", m: "6:30 PM", u: "https://enrollment.nd.edu/portal/ndontheroad" },
+  { d: "2026-09-10", c: "Spokane", s: "WA", t: "Notre Dame on the Road - Spokane", o: "University of Notre Dame", m: "7:00 PM", u: "https://enrollment.nd.edu/portal/ndontheroad" },
+  { d: "2026-10-13", c: "Fairfield", s: "CT", t: "Notre Dame on the Road - Fairfield College Preparatory School", o: "University of Notre Dame", m: "6:30 PM", u: "https://enrollment.nd.edu/portal/ndontheroad" },
+  { d: "2026-10-15", c: "West Hartford", s: "CT", t: "Notre Dame on the Road - Northwest Catholic High School", o: "University of Notre Dame", m: "6:30 PM", u: "https://enrollment.nd.edu/portal/ndontheroad" }
 ];
 SESSIONS.forEach(function (ev) {
   if (!Array.isArray(ev.o)) ev.o = [ev.o];
@@ -627,7 +641,7 @@ var STATE_NAMES = {
   HI: "Hawaii", ID: "Idaho", IL: "Illinois", IN: "Indiana", KY: "Kentucky", LA: "Louisiana",
   MD: "Maryland", MA: "Massachusetts", MI: "Michigan", MN: "Minnesota", MO: "Missouri", MT: "Montana",
   KS: "Kansas", NV: "Nevada", NJ: "New Jersey", NM: "New Mexico", NY: "New York", NC: "North Carolina", OH: "Ohio",
-  OK: "Oklahoma", OR: "Oregon", PA: "Pennsylvania", PR: "Puerto Rico", SC: "South Carolina", TN: "Tennessee",
+  OK: "Oklahoma", OR: "Oregon", PA: "Pennsylvania", PR: "Puerto Rico", RI: "Rhode Island", SC: "South Carolina", TN: "Tennessee",
   TX: "Texas", UT: "Utah", VA: "Virginia", WA: "Washington", WI: "Wisconsin", WY: "Wyoming"
 };
 
@@ -651,7 +665,8 @@ var ORG_LOGOS = {
   "Howard University": "https://admission.howard.edu/sites/admission.howard.edu/themes/custom/hu_admission_theme/favicon.ico",
   "University of Maryland": "https://admissions.umd.edu/favicon.ico",
   "Elon University": "https://www.elon.edu/u/wp-content/themes/ElonUniversity-Base/assets/img/favicons/favicon-32x32.png",
-  "Lehigh University": "https://www2.lehigh.edu/sites/www2/files/favicons/favicon32.png"
+  "Lehigh University": "https://www2.lehigh.edu/sites/www2/files/favicons/favicon32.png",
+  "University of Notre Dame": "https://www.nd.edu/favicon.ico"
 };
 
 document.addEventListener('DOMContentLoaded', function () {
