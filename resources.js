@@ -741,6 +741,27 @@ var SESSIONS = [
   { d: "2026-10-14", c: "Springfield", s: "MA", t: "Springfield Public Schools Annual College Fair", o: "Amherst College", m: "8:00 AM", u: "https://admission.amherst.edu/portal/ontheroad" },
   { d: "2026-10-15", c: "San Diego", s: "CA", t: "MCAS Miramar Education Center - College Fair", o: "Amherst College", m: "11:00 AM", u: "https://admission.amherst.edu/portal/ontheroad" },
   { d: "2026-10-16", c: "Oceanside", s: "CA", t: "Camp Pendleton: LSP Forum and College Fair", o: "Amherst College", m: "9:00 AM", u: "https://admission.amherst.edu/portal/ontheroad" },
+  { d: "2026-08-25", c: "Fairburn", s: "GA", t: "Peach State Tour - Fairburn, GA", o: ["University of Georgia", "Augusta University", "Georgia State University", "Georgia Institute of Technology"], m: "6:00 PM · Global Impact Academy", u: "https://apply.uga.edu/portal/peachstate" },
+  { d: "2026-08-27", c: "Athens", s: "GA", t: "Peach State Tour - Athens, GA (UGA Chapel)", o: ["University of Georgia", "Augusta University", "Georgia State University", "Georgia Institute of Technology"], m: "6:00 PM · UGA Chapel", u: "https://apply.uga.edu/portal/peachstate" },
+  { d: "2026-08-29", c: "College Park", s: "GA", t: "Woodward Academy College Fair", o: "University of Georgia", m: "1:00 PM · Woodward Academy", u: "https://apply.uga.edu/portal/fairs" },
+  { d: "2026-09-01", c: "Augusta", s: "GA", t: "Peach State Tour - Augusta, GA (Maxwell Theatre)", o: ["University of Georgia", "Augusta University", "Georgia State University", "Georgia Institute of Technology"], m: "6:00 PM · Augusta University, Maxwell Theatre", u: "https://apply.uga.edu/portal/peachstate" },
+  { d: "2026-09-03", c: "Warner Robins", s: "GA", t: "Peach State Tour - Warner Robins, GA", o: ["University of Georgia", "Augusta University", "Georgia State University", "Georgia Institute of Technology"], m: "6:00 PM · Houston County High School", u: "https://apply.uga.edu/portal/peachstate" },
+  { d: "2026-09-04", c: "Morrow", s: "GA", t: "PROBE - Clayton County Fair", o: "University of Georgia", m: "9:00 AM · Morrow Center", u: "https://apply.uga.edu/portal/fairs" },
+  { d: "2026-09-08", c: "Brunswick", s: "GA", t: "Peach State Tour - Brunswick, GA", o: ["University of Georgia", "Augusta University", "Georgia State University", "Georgia Institute of Technology"], m: "6:00 PM · Brunswick High School", u: "https://apply.uga.edu/portal/peachstate" },
+  { d: "2026-09-08", c: "Lawrenceville", s: "GA", t: "Peach State Tour - Lawrenceville, GA", o: ["University of Georgia", "Augusta University", "Georgia State University", "Georgia Institute of Technology"], m: "6:00 PM · Discovery High School", u: "https://apply.uga.edu/portal/peachstate" },
+  { d: "2026-09-08", c: "McDonough", s: "GA", t: "Evening with UGA and Georgia Tech - Henry County", o: ["University of Georgia", "Georgia Institute of Technology"], m: "6:00 PM · Henry County Performing Arts Center", u: "https://apply.uga.edu/portal/fairs" },
+  { d: "2026-09-10", c: "Cairo", s: "GA", t: "Peach State Tour - Cairo, GA", o: ["University of Georgia", "Augusta University", "Georgia State University", "Georgia Institute of Technology"], m: "6:00 PM · Cairo High School", u: "https://apply.uga.edu/portal/peachstate" },
+  { d: "2026-09-10", c: "Calhoun", s: "GA", t: "Peach State Tour - Calhoun, GA", o: ["University of Georgia", "Augusta University", "Georgia State University", "Georgia Institute of Technology"], m: "6:00 PM · Calhoun High School", u: "https://apply.uga.edu/portal/peachstate" },
+  { d: "2026-09-10", c: "Nashville", s: "TN", t: "Ensworth School Mini Fair", o: "University of Georgia", m: "12:20 PM · Ensworth High School", u: "https://apply.uga.edu/portal/fairs" },
+  { d: "2026-09-15", c: "Dahlonega", s: "GA", t: "Peach State Tour - Dahlonega, GA", o: ["University of Georgia", "Augusta University", "Georgia State University", "Georgia Institute of Technology"], m: "6:00 PM · Lumpkin County High School", u: "https://apply.uga.edu/portal/peachstate" },
+  { d: "2026-09-15", c: "Savannah", s: "GA", t: "Peach State Tour - Savannah, GA", o: ["University of Georgia", "Augusta University", "Georgia State University", "Georgia Institute of Technology"], m: "6:00 PM · Herschel V. Jenkins High School", u: "https://apply.uga.edu/portal/peachstate" },
+  { d: "2026-09-17", c: "Suwanee", s: "GA", t: "Peach State Tour - Suwanee, GA", o: ["University of Georgia", "Augusta University", "Georgia State University", "Georgia Institute of Technology"], m: "6:00 PM · Lambert High School", u: "https://apply.uga.edu/portal/peachstate" },
+  { d: "2026-09-17", c: "Valdosta", s: "GA", t: "Peach State Tour - Valdosta, GA", o: ["University of Georgia", "Augusta University", "Georgia State University", "Georgia Institute of Technology"], m: "6:00 PM · VHS Performing Arts Center", u: "https://apply.uga.edu/portal/peachstate" },
+  { d: "2026-09-17", c: "Conyers", s: "GA", t: "PROBE - Salem High School Fair", o: "University of Georgia", m: "9:00 AM · Salem High School", u: "https://apply.uga.edu/portal/fairs" },
+  { d: "2026-09-22", c: "Columbus", s: "GA", t: "Peach State Tour - Columbus, GA", o: ["University of Georgia", "Augusta University", "Georgia State University", "Georgia Institute of Technology"], m: "6:00 PM · Rainey-McCullers School of the Arts", u: "https://apply.uga.edu/portal/peachstate" },
+  { d: "2026-09-24", c: "Carrollton", s: "GA", t: "Peach State Tour - Carrollton, GA", o: ["University of Georgia", "Augusta University", "Georgia State University", "Georgia Institute of Technology"], m: "6:00 PM · Joshua Mabry Center for the Arts", u: "https://apply.uga.edu/portal/peachstate" },
+  { d: "2026-09-24", c: "Milledgeville", s: "GA", t: "Peach State Tour - Milledgeville, GA", o: ["University of Georgia", "Augusta University", "Georgia State University", "Georgia Institute of Technology"], m: "6:00 PM · Baldwin High School", u: "https://apply.uga.edu/portal/peachstate" },
+  { d: "2026-10-06", c: "Kennesaw", s: "GA", t: "North Cobb Regional Library Fair", o: "University of Georgia", m: "4:00 PM · North Cobb Regional Library", u: "https://apply.uga.edu/portal/fairs" },
 ];
 SESSIONS.forEach(function (ev) {
   if (!Array.isArray(ev.o)) ev.o = [ev.o];
@@ -779,7 +800,11 @@ var ORG_LOGOS = {
   "Lehigh University": "https://www2.lehigh.edu/sites/www2/files/favicons/favicon32.png",
   "University of Notre Dame": "https://www.nd.edu/favicon.ico",
   "University of Massachusetts Amherst": "https://yes-umass-edu.cdn.technolutions.net/favicon.ico",
-  "Amherst College": "https://admission-amherst-edu.cdn.technolutions.net/images/Amherst-College-seal-light-purple-160x160.svg"
+  "Amherst College": "https://admission-amherst-edu.cdn.technolutions.net/images/Amherst-College-seal-light-purple-160x160.svg",
+  "University of Georgia": "https://admissions.uga.edu/wp-content/uploads/2026/02/uga-admissions-logo.svg",
+  "Augusta University": "https://www.augusta.edu/favicon.ico",
+  "Georgia State University": "https://www.gsu.edu/wp-content/themes/gsu-flex-2/images/flame.png",
+  "Georgia Institute of Technology": "https://www.gatech.edu/themes/custom/gatech/favicon.ico"
 };
 
 document.addEventListener('DOMContentLoaded', function () {
