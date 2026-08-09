@@ -57,94 +57,23 @@
       <p>Colleges and organizations hosting in-person admission events near North Dallas, TX. Pulled live on August 8, 2026 &mdash; always confirm dates on the host's site before attending.</p>
     </div>
 
-    <div class="session-filters">
-      <span class="session-filter active">Texas</span>
-    </div>
-
-    <div class="session-list">
-      <div class="session-item">
-        <div class="session-date"><div class="month">Aug</div><div class="day">15</div></div>
-        <div>
-          <div class="session-title">Houston, TX &mdash; Info Session &amp; College Fair</div>
-          <div class="session-meta">Colleges That Change Lives (40+ member colleges)</div>
-          <a class="session-link" href="https://ctcl.org/houston-august-2026/" target="_blank" rel="noopener">View details &rarr;</a>
-        </div>
+    <div class="session-controls">
+      <div class="session-control">
+        <label for="state-filter">State</label>
+        <select id="state-filter"></select>
       </div>
-
-      <div class="session-item">
-        <div class="session-date"><div class="month">Aug</div><div class="day">15</div></div>
-        <div>
-          <div class="session-title">Austin, TX &mdash; Info Session &amp; College Fair</div>
-          <div class="session-meta">Colleges That Change Lives (40+ member colleges)</div>
-          <a class="session-link" href="https://ctcl.org/austin-august-2026/" target="_blank" rel="noopener">View details &rarr;</a>
-        </div>
-      </div>
-
-      <div class="session-item">
-        <div class="session-date"><div class="month">Aug</div><div class="day">16</div></div>
-        <div>
-          <div class="session-title">Dallas &ndash; Fort Worth, TX &mdash; Info Session &amp; College Fair</div>
-          <div class="session-meta">Colleges That Change Lives (40+ member colleges)</div>
-          <a class="session-link" href="https://ctcl.org/dallas-august-2026/" target="_blank" rel="noopener">View details &rarr;</a>
-        </div>
-      </div>
-
-      <div class="session-item">
-        <div class="session-date"><div class="month">Aug</div><div class="day">29</div></div>
-        <div>
-          <div class="session-title">Dallas, TX &mdash; Discover USC</div>
-          <div class="session-meta">University of Southern California &middot; 1:00&ndash;3:00 PM</div>
-          <a class="session-link" href="https://applyto.usc.edu/portal/discoveruscevents?tab=off-campus" target="_blank" rel="noopener">View details &rarr;</a>
-        </div>
-      </div>
-
-      <div class="session-item">
-        <div class="session-date"><div class="month">Sep</div><div class="day">17</div></div>
-        <div>
-          <div class="session-title">Dallas (Arlington), TX &mdash; Information Session</div>
-          <div class="session-meta">Tulane University &middot; 7:00 PM &middot; Hilton Arlington</div>
-          <a class="session-link" href="https://apply.tulane.edu/portal/tulanecomestoyou" target="_blank" rel="noopener">View details &rarr;</a>
-        </div>
-      </div>
-
-      <div class="session-item">
-        <div class="session-date"><div class="month">Sep</div><div class="day">19</div></div>
-        <div>
-          <div class="session-title">Dallas, TX &mdash; National College Fair</div>
-          <div class="session-meta">NACAC &middot; 1:00&ndash;4:00 PM &middot; 175&ndash;400 colleges represented</div>
-          <a class="session-link" href="https://www.nacacattend.org/26Dallas" target="_blank" rel="noopener">View details &rarr;</a>
-        </div>
-      </div>
-
-      <div class="session-item">
-        <div class="session-date"><div class="month">Sep</div><div class="day">27</div></div>
-        <div>
-          <div class="session-title">Houston, TX &mdash; Information Session</div>
-          <div class="session-meta">Tulane University &middot; 3:00 PM &middot; The Laura Hotel</div>
-          <a class="session-link" href="https://apply.tulane.edu/portal/tulanecomestoyou" target="_blank" rel="noopener">View details &rarr;</a>
-        </div>
-      </div>
-
-      <div class="session-item">
-        <div class="session-date"><div class="month">Oct</div><div class="day">4</div></div>
-        <div>
-          <div class="session-title">San Antonio, TX &mdash; Information Session</div>
-          <div class="session-meta">Tulane University &middot; 6:30 PM &middot; Witte Museum</div>
-          <a class="session-link" href="https://apply.tulane.edu/portal/tulanecomestoyou" target="_blank" rel="noopener">View details &rarr;</a>
-        </div>
-      </div>
-
-      <div class="session-item">
-        <div class="session-date"><div class="month">Oct</div><div class="day">8</div></div>
-        <div>
-          <div class="session-title">Austin, TX &mdash; Information Session</div>
-          <div class="session-meta">Tulane University &middot; 6:30 PM &middot; Hyatt Regency Austin</div>
-          <a class="session-link" href="https://apply.tulane.edu/portal/tulanecomestoyou" target="_blank" rel="noopener">View details &rarr;</a>
-        </div>
+      <div class="session-control">
+        <label for="college-filter">College / organization</label>
+        <select id="college-filter"></select>
       </div>
     </div>
 
-    <p class="resource-note" style="text-align: center; max-width: 620px; margin: 24px auto 0;">George Washington and Vanderbilt don't currently have Texas stops on their fall schedules &mdash; check their full "on the road" pages for updates. Event details change often; always confirm dates on the host's website before attending.</p>
+    <div class="session-filters" id="city-filter"></div>
+
+    <div class="session-list" id="session-results"></div>
+    <p class="resource-note" id="session-empty" style="display:none; text-align:center; max-width: 620px; margin: 24px auto 0;">No sessions currently listed for this selection &mdash; try a different state or organization.</p>
+
+    <p class="resource-note" style="text-align: center; max-width: 620px; margin: 24px auto 0;">Event details change often; always confirm dates on the host's website before attending.</p>
   </div>
 </section>
 
@@ -244,5 +173,6 @@
 </footer>
 
 <script src="main.js"></script>
+<script src="resources.js"></script>
 </body>
 </html>

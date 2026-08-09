@@ -485,6 +485,26 @@ textarea { resize: vertical; min-height: 120px; }
 }
 
 /* Session list (Admission Info Sessions in Your Area) */
+.session-controls {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.session-control {
+  min-width: 220px;
+}
+
+.session-control label {
+  text-align: center;
+}
+
+.session-control select {
+  cursor: pointer;
+}
+
 .session-filters {
   display: flex;
   gap: 10px;
@@ -501,6 +521,12 @@ textarea { resize: vertical; min-height: 120px; }
   border: 1px solid var(--border);
   background: var(--white);
   color: var(--navy);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.session-filter:hover {
+  border-color: var(--gold);
 }
 
 .session-filter.active {
