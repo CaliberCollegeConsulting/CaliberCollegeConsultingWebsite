@@ -784,5 +784,10 @@ textarea { resize: vertical; min-height: 120px; }
   .footer-grid { grid-template-columns: 1fr; }
   .hero { padding: 70px 0 60px; }
   section { padding: 56px 0; }
-  .session-logo { display: none; }
+  .session-item { padding: 14px; gap: 10px; }
+  .session-date { min-width: 44px; padding: 6px 8px; }
+  .session-date .day { font-size: 1rem; }
+  .session-logo { width: 34px; height: 34px; }
+  .session-logo img { max-width: 34px; max-height: 34px; }
+  .session-title { font-size: 0.92rem; }
 }
