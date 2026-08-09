@@ -154,8 +154,21 @@ var SESSIONS = [
   { d: "2026-09-21", c: "Iron Mountain", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM CT · Pine Grove Country Club", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
   { d: "2026-09-22", c: "Houghton", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · Bonfire at The Continental Fire Co.", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
   { d: "2026-09-23", c: "Marquette", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · The Landmark Inn", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
-  { d: "2026-09-24", c: "Sault Ste. Marie", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · Sault Ste. Marie Country Club", u: "https://enrollmentconnect.umich.edu/portal/bbty" }
+  { d: "2026-09-24", c: "Sault Ste. Marie", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · Sault Ste. Marie Country Club", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
+  { d: "2026-08-24", c: "Nashville", s: "TN", t: "LAUNCH Collective Info Session", o: ["Cornell University", "Emory University", "Pomona College", "Rice University", "Washington University in St. Louis"], m: "6:30 PM", u: "https://riceadmission.rice.edu/portal/consortium-student" },
+  { d: "2026-08-25", c: "Raleigh", s: "NC", t: "LAUNCH Collective Info Session", o: ["Cornell University", "Emory University", "Pomona College", "Rice University", "Washington University in St. Louis"], m: "6:30 PM", u: "https://riceadmission.rice.edu/portal/consortium-student" },
+  { d: "2026-08-26", c: "Charlotte", s: "NC", t: "LAUNCH Collective Info Session", o: ["Cornell University", "Emory University", "Pomona College", "Rice University", "Washington University in St. Louis"], m: "6:30 PM", u: "https://riceadmission.rice.edu/portal/consortium-student" },
+  { d: "2026-08-27", c: "Atlanta", s: "GA", t: "LAUNCH Collective Info Session", o: ["Cornell University", "Emory University", "Pomona College", "Rice University", "Washington University in St. Louis"], m: "6:30 PM", u: "https://riceadmission.rice.edu/portal/consortium-student" },
+  { d: "2026-08-30", c: "Winnetka", s: "IL", t: "LAUNCH Collective Info Session", o: ["Cornell University", "Emory University", "Pomona College", "Rice University", "Washington University in St. Louis"], m: "3:00 PM", u: "https://riceadmission.rice.edu/portal/consortium-student" },
+  { d: "2026-08-31", c: "Richton Park", s: "IL", t: "LAUNCH Collective Info Session", o: ["Cornell University", "Emory University", "Pomona College", "Rice University", "Washington University in St. Louis"], m: "7:00 PM", u: "https://riceadmission.rice.edu/portal/consortium-student" },
+  { d: "2026-09-01", c: "St. Louis", s: "MO", t: "LAUNCH Collective Info Session", o: ["Cornell University", "Emory University", "Pomona College", "Rice University", "Washington University in St. Louis"], m: "7:00 PM", u: "https://riceadmission.rice.edu/portal/consortium-student" },
+  { d: "2026-09-02", c: "Kansas City", s: "MO", t: "LAUNCH Collective Info Session", o: ["Cornell University", "Emory University", "Pomona College", "Rice University", "Washington University in St. Louis"], m: "7:00 PM", u: "https://riceadmission.rice.edu/portal/consortium-student" },
+  { d: "2026-09-03", c: "Minneapolis", s: "MN", t: "LAUNCH Collective Info Session", o: ["Cornell University", "Emory University", "Pomona College", "Rice University", "Washington University in St. Louis"], m: "7:00 PM · Golden Valley", u: "https://riceadmission.rice.edu/portal/consortium-student" }
 ];
+
+SESSIONS.forEach(function (ev) {
+  if (!Array.isArray(ev.o)) ev.o = [ev.o];
+});
 
 var STATE_NAMES = {
   AL: "Alabama", AZ: "Arizona", AR: "Arkansas", CA: "California", CO: "Colorado",
@@ -190,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var activeCity = 'All';
 
   function statesForCollege(college) {
-    var subset = college ? SESSIONS.filter(function (ev) { return ev.o === college; }) : SESSIONS;
+    var subset = college ? SESSIONS.filter(function (ev) { return ev.o.indexOf(college) !== -1; }) : SESSIONS;
     var out = [];
     subset.forEach(function (ev) { if (out.indexOf(ev.s) === -1) out.push(ev.s); });
     out.sort(function (a, b) { return STATE_NAMES[a].localeCompare(STATE_NAMES[b]); });
@@ -200,7 +213,9 @@ document.addEventListener('DOMContentLoaded', function () {
   function collegesForState(state) {
     var subset = state ? SESSIONS.filter(function (ev) { return ev.s === state; }) : SESSIONS;
     var out = [];
-    subset.forEach(function (ev) { if (out.indexOf(ev.o) === -1) out.push(ev.o); });
+    subset.forEach(function (ev) {
+      ev.o.forEach(function (name) { if (out.indexOf(name) === -1) out.push(name); });
+    });
     out.sort();
     return out;
   }
@@ -295,7 +310,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var college = collegeSelect.value;
     var filtered = SESSIONS.filter(function (ev) {
       if (state && ev.s !== state) return false;
-      if (college && ev.o !== college) return false;
+      if (college && ev.o.indexOf(college) === -1) return false;
       if (activeCity !== 'All' && ev.c !== activeCity) return false;
       return true;
     });
@@ -310,17 +325,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     filtered.forEach(function (ev) {
       var date = formatDate(ev.d);
-      var logo = ORG_LOGOS[ev.o];
+      var orgLabel = ev.o.join(', ');
+      var logo = ev.o.length === 1 ? ORG_LOGOS[ev.o[0]] : null;
       var item = document.createElement('div');
       item.className = 'session-item';
       item.innerHTML =
         '<div class="session-date"><div class="month">' + date.month + '</div><div class="day">' + date.day + '</div></div>' +
         '<div class="session-body">' +
         '<div class="session-title">' + ev.c + ', ' + ev.s + ' — ' + ev.t + '</div>' +
-        '<div class="session-meta">' + ev.o + (ev.m ? ' · ' + ev.m : '') + '</div>' +
+        '<div class="session-meta">' + orgLabel + (ev.m ? ' · ' + ev.m : '') + '</div>' +
         '<a class="session-link" href="' + ev.u + '" target="_blank" rel="noopener">View details →</a>' +
         '</div>' +
-        (logo ? '<div class="session-logo"><img src="' + logo + '" alt="' + ev.o + ' logo" loading="lazy" onerror="this.parentElement.style.display=\'none\'"></div>' : '');
+        (logo ? '<div class="session-logo"><img src="' + logo + '" alt="' + orgLabel + ' logo" loading="lazy" onerror="this.parentElement.style.display=\'none\'"></div>' : '');
       resultsEl.appendChild(item);
     });
   }
