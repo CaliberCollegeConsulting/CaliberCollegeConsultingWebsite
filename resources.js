@@ -22,9 +22,9 @@ var SESSIONS = [
   { d: "2026-10-03", c: "Honolulu", s: "HI", t: "Discover USC", o: "USC", m: "11:00 AM–1:00 PM", u: "https://applyto.usc.edu/portal/discoveruscevents?tab=off-campus" },
   { d: "2026-08-17", c: "Boston", s: "MA", t: "Meet GW in Boston", o: "George Washington University", m: "6:00 PM · Museum of Science", u: "https://ugadmissions.gwu.edu/portal/gwotr" },
   { d: "2026-08-18", c: "New York", s: "NY", t: "Meet GW in NYC", o: "George Washington University", m: "6:00 PM · Blender Space", u: "https://ugadmissions.gwu.edu/portal/gwotr" },
-  { d: "2026-08-19", c: "Northern NJ", s: "NJ", t: "Destination DC: DC Comes to Northern NJ", o: "George Washington University", m: "7:00 PM · Montclair Film (joint w/ American, George Mason, Howard)", u: "https://ugadmissions.gwu.edu/portal/gwotr" },
+  { d: "2026-08-19", c: "Northern NJ", s: "NJ", t: "Destination DC: DC Comes to Northern NJ", o: ["George Washington University", "American University", "George Mason University", "Howard University"], m: "7:00 PM · Montclair Film", u: "https://ugadmissions.gwu.edu/portal/gwotr" },
   { d: "2026-08-26", c: "Orange County", s: "CA", t: "Meet GW & East Coast Colleges", o: "George Washington University", m: "6:00 PM · Aliso Viejo Country Club (joint w/ American, Elon, Lehigh)", u: "https://ugadmissions.gwu.edu/portal/gwotr" },
-  { d: "2026-09-01", c: "Atlanta", s: "GA", t: "Destination DC: DC Comes to Atlanta", o: "George Washington University", m: "6:00 PM · Woodruff Arts Center (joint w/ American, George Mason, Howard, Maryland)", u: "https://ugadmissions.gwu.edu/portal/gwotr" },
+  { d: "2026-09-01", c: "Atlanta", s: "GA", t: "Destination DC: DC Comes to Atlanta", o: ["George Washington University", "American University", "George Mason University", "Howard University", "University of Maryland"], m: "6:00 PM · Woodruff Arts Center", u: "https://ugadmissions.gwu.edu/portal/gwotr" },
   { d: "2026-08-19", c: "Lafayette", s: "LA", t: "Information Session", o: "Tulane University", m: "6:30 PM · DoubleTree by Hilton Lafayette", u: "https://apply.tulane.edu/portal/tulanecomestoyou" },
   { d: "2026-08-20", c: "Lake Charles", s: "LA", t: "Information Session", o: "Tulane University", m: "5:30 PM · Calcasieu Parish Public Library", u: "https://apply.tulane.edu/portal/tulanecomestoyou" },
   { d: "2026-08-20", c: "Baton Rouge", s: "LA", t: "Information Session", o: "Tulane University", m: "6:30 PM · EBRPL Bluebonnet Regional Branch", u: "https://apply.tulane.edu/portal/tulanecomestoyou" },
@@ -643,7 +643,11 @@ var ORG_LOGOS = {
   "University of Tulsa": "https://utulsa.edu/favicon.ico",
   "University of Denver": "https://admission-du-edu.cdn.technolutions.net/images/du-logo-web.png",
   "Texas Christian University": "https://apply-tcu-edu.cdn.technolutions.net/favicon.ico",
-  "Hampden-Sydney College": "https://admission-hsc-edu.cdn.technolutions.net/images/hsc_logo.png"
+  "Hampden-Sydney College": "https://admission-hsc-edu.cdn.technolutions.net/images/hsc_logo.png",
+  "American University": "https://www.american.edu/customcf/assets/favicons/AU-favicon-192x192.png",
+  "George Mason University": "https://www.gmu.edu/themes/custom/sf_mason_2024/favicon.ico",
+  "Howard University": "https://admission.howard.edu/sites/admission.howard.edu/themes/custom/hu_admission_theme/favicon.ico",
+  "University of Maryland": "https://admissions.umd.edu/favicon.ico"
 };
 
 document.addEventListener('DOMContentLoaded', function () {
