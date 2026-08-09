@@ -730,7 +730,18 @@ var SESSIONS = [
   { d: "2026-10-14", c: "Fairfax", s: "VA", t: "2026 Alcanza College Fair", o: "University of Massachusetts Amherst", m: "10:30 AM", u: "https://yes.umass.edu/portal/high_school_visits" },
   { d: "2026-10-14", c: "Woodbridge", s: "VA", t: "PWCS College and Career Fair - East", o: "University of Massachusetts Amherst", m: "6:00 PM", u: "https://yes.umass.edu/portal/high_school_visits" },
   { d: "2026-10-18", c: "Fairfax", s: "VA", t: "Fairfax County Public Schools College Fair", o: "University of Massachusetts Amherst", m: "4:00 PM", u: "https://yes.umass.edu/portal/high_school_visits" },
-  { d: "2026-10-20", c: "Mc Lean", s: "VA", t: "The Potomac School College Fair", o: "University of Massachusetts Amherst", m: "11:40 AM", u: "https://yes.umass.edu/portal/high_school_visits" },];
+  { d: "2026-10-20", c: "Mc Lean", s: "VA", t: "The Potomac School College Fair", o: "University of Massachusetts Amherst", m: "11:40 AM", u: "https://yes.umass.edu/portal/high_school_visits" },
+  { d: "2026-08-30", c: "Los Angeles", s: "CA", t: "Los Angeles Public Info Session", o: "Amherst College", m: "2:30 PM", u: "https://admission.amherst.edu/portal/ontheroad" },
+  { d: "2026-08-31", c: "Anaheim", s: "CA", t: "Orange County Public Information Session", o: "Amherst College", m: "6:30 PM", u: "https://admission.amherst.edu/portal/ontheroad" },
+  { d: "2026-09-01", c: "San Diego", s: "CA", t: "San Diego Public Information Session", o: "Amherst College", m: "6:30 PM", u: "https://admission.amherst.edu/portal/ontheroad" },
+  { d: "2026-09-02", c: "Denver", s: "CO", t: "Denver Public Information Session", o: "Amherst College", m: "6:30 PM", u: "https://admission.amherst.edu/portal/ontheroad" },
+  { d: "2026-09-04", c: "Hyde Park", s: "MA", t: "Academy of the Pacific Rim Admissions Officer Luncheon & College Fair", o: "Amherst College", m: "9:45 AM", u: "https://admission.amherst.edu/portal/ontheroad" },
+  { d: "2026-10-04", c: "Saint Petersburg", s: "FL", t: "Bay Area Independent Schools College Fair", o: "Amherst College", m: "12:00 PM", u: "https://admission.amherst.edu/portal/ontheroad" },
+  { d: "2026-10-06", c: "Anaheim", s: "CA", t: "Fairmont Preparatory Academy College Fair", o: "Amherst College", m: "6:00 PM", u: "https://admission.amherst.edu/portal/ontheroad" },
+  { d: "2026-10-14", c: "Springfield", s: "MA", t: "Springfield Public Schools Annual College Fair", o: "Amherst College", m: "8:00 AM", u: "https://admission.amherst.edu/portal/ontheroad" },
+  { d: "2026-10-15", c: "San Diego", s: "CA", t: "MCAS Miramar Education Center - College Fair", o: "Amherst College", m: "11:00 AM", u: "https://admission.amherst.edu/portal/ontheroad" },
+  { d: "2026-10-16", c: "Oceanside", s: "CA", t: "Camp Pendleton: LSP Forum and College Fair", o: "Amherst College", m: "9:00 AM", u: "https://admission.amherst.edu/portal/ontheroad" },
+];
 SESSIONS.forEach(function (ev) {
   if (!Array.isArray(ev.o)) ev.o = [ev.o];
 });
@@ -767,7 +778,8 @@ var ORG_LOGOS = {
   "Elon University": "https://www.elon.edu/u/wp-content/themes/ElonUniversity-Base/assets/img/favicons/favicon-32x32.png",
   "Lehigh University": "https://www2.lehigh.edu/sites/www2/files/favicons/favicon32.png",
   "University of Notre Dame": "https://www.nd.edu/favicon.ico",
-  "University of Massachusetts Amherst": "https://yes-umass-edu.cdn.technolutions.net/favicon.ico"
+  "University of Massachusetts Amherst": "https://yes-umass-edu.cdn.technolutions.net/favicon.ico",
+  "Amherst College": "https://admission-amherst-edu.cdn.technolutions.net/images/Amherst-College-seal-light-purple-160x160.svg"
 };
 
 document.addEventListener('DOMContentLoaded', function () {
