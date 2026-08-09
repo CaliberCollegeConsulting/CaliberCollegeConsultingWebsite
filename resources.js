@@ -168,32 +168,53 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var activeCity = 'All';
 
-  var states = [];
-  Object.keys(STATE_NAMES).forEach(function (code) {
-    if (SESSIONS.some(function (ev) { return ev.s === code; })) states.push(code);
-  });
-  states.sort(function (a, b) { return STATE_NAMES[a].localeCompare(STATE_NAMES[b]); });
-  states.forEach(function (code) {
-    var opt = document.createElement('option');
-    opt.value = code;
-    opt.textContent = STATE_NAMES[code];
-    if (code === 'TX') opt.selected = true;
-    stateSelect.appendChild(opt);
-  });
+  function statesForCollege(college) {
+    var subset = college ? SESSIONS.filter(function (ev) { return ev.o === college; }) : SESSIONS;
+    var out = [];
+    subset.forEach(function (ev) { if (out.indexOf(ev.s) === -1) out.push(ev.s); });
+    out.sort(function (a, b) { return STATE_NAMES[a].localeCompare(STATE_NAMES[b]); });
+    return out;
+  }
 
-  var colleges = [];
-  SESSIONS.forEach(function (ev) { if (colleges.indexOf(ev.o) === -1) colleges.push(ev.o); });
-  colleges.sort();
-  var allOpt = document.createElement('option');
-  allOpt.value = '';
-  allOpt.textContent = 'All colleges & fairs';
-  collegeSelect.appendChild(allOpt);
-  colleges.forEach(function (name) {
-    var opt = document.createElement('option');
-    opt.value = name;
-    opt.textContent = name;
-    collegeSelect.appendChild(opt);
-  });
+  function collegesForState(state) {
+    var subset = state ? SESSIONS.filter(function (ev) { return ev.s === state; }) : SESSIONS;
+    var out = [];
+    subset.forEach(function (ev) { if (out.indexOf(ev.o) === -1) out.push(ev.o); });
+    out.sort();
+    return out;
+  }
+
+  function populateStateSelect(college, preferredState) {
+    var list = statesForCollege(college);
+    stateSelect.innerHTML = '';
+    list.forEach(function (code) {
+      var opt = document.createElement('option');
+      opt.value = code;
+      opt.textContent = STATE_NAMES[code];
+      stateSelect.appendChild(opt);
+    });
+    var target = list.indexOf(preferredState) !== -1 ? preferredState : (list.indexOf('TX') !== -1 ? 'TX' : list[0]);
+    stateSelect.value = target;
+    return target;
+  }
+
+  function populateCollegeSelect(state, preferredCollege) {
+    var list = collegesForState(state);
+    collegeSelect.innerHTML = '';
+    var allOpt = document.createElement('option');
+    allOpt.value = '';
+    allOpt.textContent = 'All colleges & fairs';
+    collegeSelect.appendChild(allOpt);
+    list.forEach(function (name) {
+      var opt = document.createElement('option');
+      opt.value = name;
+      opt.textContent = name;
+      collegeSelect.appendChild(opt);
+    });
+    var target = list.indexOf(preferredCollege) !== -1 ? preferredCollege : '';
+    collegeSelect.value = target;
+    return target;
+  }
 
   function formatDate(iso) {
     var parts = iso.split('-');
@@ -274,12 +295,25 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   stateSelect.addEventListener('change', function () {
+    var newState = stateSelect.value;
+    var college = populateCollegeSelect(newState, collegeSelect.value);
+    populateStateSelect(college, newState);
     activeCity = 'All';
     renderCityFilter(stateSelect.value);
     renderResults();
   });
-  collegeSelect.addEventListener('change', renderResults);
 
-  renderCityFilter(stateSelect.value);
+  collegeSelect.addEventListener('change', function () {
+    var newCollege = collegeSelect.value;
+    var state = populateStateSelect(newCollege, stateSelect.value);
+    populateCollegeSelect(state, newCollege);
+    activeCity = 'All';
+    renderCityFilter(stateSelect.value);
+    renderResults();
+  });
+
+  var initState = populateStateSelect('', 'TX');
+  populateCollegeSelect(initState, '');
+  renderCityFilter(initState);
   renderResults();
 });
