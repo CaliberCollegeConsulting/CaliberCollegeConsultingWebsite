@@ -550,8 +550,30 @@ textarea { resize: vertical; min-height: 120px; }
   padding: 18px 20px;
   display: flex;
   gap: 18px;
-  align-items: flex-start;
+  align-items: center;
   box-shadow: var(--shadow);
+}
+
+.session-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.session-logo {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.session-logo img {
+  max-width: 48px;
+  max-height: 48px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 .session-date {
@@ -762,4 +784,5 @@ textarea { resize: vertical; min-height: 120px; }
   .footer-grid { grid-template-columns: 1fr; }
   .hero { padding: 70px 0 60px; }
   section { padding: 56px 0; }
+  .session-logo { display: none; }
 }

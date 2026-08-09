@@ -149,6 +149,15 @@ var STATE_NAMES = {
 
 var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
+var ORG_LOGOS = {
+  "USC": "https://admission.usc.edu/wp-content/themes/usc-communications-2023/favicon/apple-touch-icon.png",
+  "George Washington University": "https://ugadmissions-gwu-edu.cdn.technolutions.net/dev/modules/custom/gwu_blocks/images/gw-header-image-53.png",
+  "Tulane University": "https://apply-tulane-edu.cdn.technolutions.net/shared/tu_new_shield.svg",
+  "Vanderbilt University": "https://cdn.vanderbilt.edu/vu-futurevu/static/img/favicons/favicon-on-light.png",
+  "Colleges That Change Lives": "https://ctcl.org/wp-content/uploads/2024/07/CTCL-Logo-Downsized.jpg",
+  "NACAC College Fairs": "https://assets.swoogo.com/uploads/medium/2173283-6363f8e80192a.png"
+};
+
 document.addEventListener('DOMContentLoaded', function () {
   var stateSelect = document.getElementById('state-filter');
   var collegeSelect = document.getElementById('college-filter');
@@ -249,15 +258,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     filtered.forEach(function (ev) {
       var date = formatDate(ev.d);
+      var logo = ORG_LOGOS[ev.o];
       var item = document.createElement('div');
       item.className = 'session-item';
       item.innerHTML =
         '<div class="session-date"><div class="month">' + date.month + '</div><div class="day">' + date.day + '</div></div>' +
-        '<div>' +
+        '<div class="session-body">' +
         '<div class="session-title">' + ev.c + ', ' + ev.s + ' — ' + ev.t + '</div>' +
         '<div class="session-meta">' + ev.o + (ev.m ? ' · ' + ev.m : '') + '</div>' +
         '<a class="session-link" href="' + ev.u + '" target="_blank" rel="noopener">View details →</a>' +
-        '</div>';
+        '</div>' +
+        (logo ? '<div class="session-logo"><img src="' + logo + '" alt="' + ev.o + ' logo" loading="lazy" onerror="this.parentElement.style.display=\'none\'"></div>' : '');
       resultsEl.appendChild(item);
     });
   }
