@@ -134,7 +134,27 @@ var SESSIONS = [
   { d: "2026-10-25", c: "Saint Louis", s: "MO", t: "National College Fair", o: "NACAC College Fairs", m: "1:00–4:00 PM", u: "https://www.nacacattend.org/26SaintLouis" },
   { d: "2026-10-28", c: "Atlantic City", s: "NJ", t: "National College Fair", o: "NACAC College Fairs", m: "2 sessions: 9:00 AM–12:00 PM & 6:00–8:00 PM", u: "https://www.nacacattend.org/26AtlanticCity" },
   { d: "2026-11-01", c: "Houston", s: "TX", t: "STEM College & Career Fair", o: "NACAC College Fairs", m: "1:00–4:00 PM", u: "https://www.nacacattend.org/26STEMHouston" },
-  { d: "2026-11-14", c: "New Jersey", s: "NJ", t: "STEM College & Career Fair", o: "NACAC College Fairs", m: "1:00–4:00 PM", u: "https://www.nacacattend.org/26STEMNewJersey" }
+  { d: "2026-11-14", c: "New Jersey", s: "NJ", t: "STEM College & Career Fair", o: "NACAC College Fairs", m: "1:00–4:00 PM", u: "https://www.nacacattend.org/26STEMNewJersey" },
+  { d: "2026-08-10", c: "Lansing", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · Crowne Plaza Lansing", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
+  { d: "2026-08-10", c: "Muskegon", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · Shoreline Inn & Conference Center", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
+  { d: "2026-08-11", c: "Grand Rapids", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · Sheraton Grand Rapids Airport Hotel", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
+  { d: "2026-08-11", c: "Port Huron", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · DoubleTree by Hilton Port Huron", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
+  { d: "2026-08-12", c: "Kalamazoo", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · Delta Hotels Kalamazoo Conference Center", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
+  { d: "2026-08-13", c: "Jackson", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · Holiday Inn Jackson NW", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
+  { d: "2026-08-13", c: "Pontiac", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · Auburn Hills Marriott Pontiac", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
+  { d: "2026-08-16", c: "Traverse City", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · Park Place Hotel and Conference Center", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
+  { d: "2026-08-17", c: "Mackinaw City", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · Bridge Vista Beach Hotel & Convention Center", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
+  { d: "2026-08-17", c: "Southfield", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · The Westin Southfield Detroit", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
+  { d: "2026-08-18", c: "Detroit", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · University of Michigan - Detroit Center", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
+  { d: "2026-08-18", c: "Saginaw", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · Hampton Inn & Suites Saginaw", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
+  { d: "2026-08-19", c: "Monroe", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · Quality Inn & Suites Monroe", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
+  { d: "2026-08-19", c: "Mount Pleasant", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · Ziibiwing Center", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
+  { d: "2026-08-20", c: "Flint", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · Flint Institute of Arts Museum", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
+  { d: "2026-08-20", c: "Macomb County", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · Zuccaro's Banquets & Catering", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
+  { d: "2026-09-21", c: "Iron Mountain", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM CT · Pine Grove Country Club", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
+  { d: "2026-09-22", c: "Houghton", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · Bonfire at The Continental Fire Co.", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
+  { d: "2026-09-23", c: "Marquette", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · The Landmark Inn", u: "https://enrollmentconnect.umich.edu/portal/bbty" },
+  { d: "2026-09-24", c: "Sault Ste. Marie", s: "MI", t: "Bringing Blue to You", o: "University of Michigan", m: "7:00 PM ET · Sault Ste. Marie Country Club", u: "https://enrollmentconnect.umich.edu/portal/bbty" }
 ];
 
 var STATE_NAMES = {
@@ -155,7 +175,8 @@ var ORG_LOGOS = {
   "Tulane University": "https://apply-tulane-edu.cdn.technolutions.net/shared/tu_new_shield.svg",
   "Vanderbilt University": "https://cdn.vanderbilt.edu/vu-futurevu/static/img/favicons/favicon-on-light.png",
   "Colleges That Change Lives": "https://ctcl.org/wp-content/uploads/2024/07/CTCL-Logo-Downsized.jpg",
-  "NACAC College Fairs": "https://assets.swoogo.com/uploads/medium/2173283-6363f8e80192a.png"
+  "NACAC College Fairs": "https://assets.swoogo.com/uploads/medium/2173283-6363f8e80192a.png",
+  "University of Michigan": "https://admissions.umich.edu/themes/custom/creative/favicon.ico"
 };
 
 document.addEventListener('DOMContentLoaded', function () {
