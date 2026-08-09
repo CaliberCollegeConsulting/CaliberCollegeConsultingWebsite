@@ -762,6 +762,9 @@ var SESSIONS = [
   { d: "2026-09-24", c: "Carrollton", s: "GA", t: "Peach State Tour - Carrollton, GA", o: ["University of Georgia", "Augusta University", "Georgia State University", "Georgia Institute of Technology"], m: "6:00 PM · Joshua Mabry Center for the Arts", u: "https://apply.uga.edu/portal/peachstate" },
   { d: "2026-09-24", c: "Milledgeville", s: "GA", t: "Peach State Tour - Milledgeville, GA", o: ["University of Georgia", "Augusta University", "Georgia State University", "Georgia Institute of Technology"], m: "6:00 PM · Baldwin High School", u: "https://apply.uga.edu/portal/peachstate" },
   { d: "2026-10-06", c: "Kennesaw", s: "GA", t: "North Cobb Regional Library Fair", o: "University of Georgia", m: "4:00 PM · North Cobb Regional Library", u: "https://apply.uga.edu/portal/fairs" },
+  { d: "2026-08-20", c: "New York", s: "NY", t: "SMFA @ NYC", o: "Tufts University", m: "4:30 PM · Studio 1418", u: "https://ugrad.admissions.tufts.edu/portal/tufts_roadmap_new?cmd=btn" },
+  { d: "2026-09-19", c: "Charlotte", s: "NC", t: "Charlotte National Portfolio Day", o: "Tufts University", m: "12:00 PM · Mallard Creek High School", u: "https://ugrad.admissions.tufts.edu/portal/tufts_roadmap_new?cmd=btn" },
+  { d: "2026-09-26", c: "Austin", s: "TX", t: "Austin National Portfolio Day", o: "Tufts University", m: "10:00 AM · Norris Conference Centers", u: "https://ugrad.admissions.tufts.edu/portal/tufts_roadmap_new?cmd=btn" },
 ];
 SESSIONS.forEach(function (ev) {
   if (!Array.isArray(ev.o)) ev.o = [ev.o];
@@ -804,7 +807,8 @@ var ORG_LOGOS = {
   "University of Georgia": "https://admissions.uga.edu/wp-content/uploads/2026/02/uga-admissions-logo.svg",
   "Augusta University": "https://www.augusta.edu/favicon.ico",
   "Georgia State University": "https://www.gsu.edu/wp-content/themes/gsu-flex-2/images/flame.png",
-  "Georgia Institute of Technology": "https://www.gatech.edu/themes/custom/gatech/favicon.ico"
+  "Georgia Institute of Technology": "https://www.gatech.edu/themes/custom/gatech/favicon.ico",
+  "Tufts University": "https://admissions.tufts.edu/images/favicons/favicon-96x96.png"
 };
 
 document.addEventListener('DOMContentLoaded', function () {
