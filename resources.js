@@ -187,13 +187,22 @@ document.addEventListener('DOMContentLoaded', function () {
   function populateStateSelect(college, preferredState) {
     var list = statesForCollege(college);
     stateSelect.innerHTML = '';
+    var allOpt = document.createElement('option');
+    allOpt.value = '';
+    allOpt.textContent = 'All states';
+    stateSelect.appendChild(allOpt);
     list.forEach(function (code) {
       var opt = document.createElement('option');
       opt.value = code;
       opt.textContent = STATE_NAMES[code];
       stateSelect.appendChild(opt);
     });
-    var target = list.indexOf(preferredState) !== -1 ? preferredState : (list.indexOf('TX') !== -1 ? 'TX' : list[0]);
+    var target;
+    if (preferredState === '' || list.indexOf(preferredState) !== -1) {
+      target = preferredState;
+    } else {
+      target = list.indexOf('TX') !== -1 ? 'TX' : list[0];
+    }
     stateSelect.value = target;
     return target;
   }
@@ -225,6 +234,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function renderCityFilter(state) {
     cityFilterEl.innerHTML = '';
+    activeCity = 'All';
+    if (!state) return;
     var cities = [];
     SESSIONS.forEach(function (ev) {
       if (ev.s === state && cities.indexOf(ev.c) === -1) cities.push(ev.c);
@@ -263,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var state = stateSelect.value;
     var college = collegeSelect.value;
     var filtered = SESSIONS.filter(function (ev) {
-      if (ev.s !== state) return false;
+      if (state && ev.s !== state) return false;
       if (college && ev.o !== college) return false;
       if (activeCity !== 'All' && ev.c !== activeCity) return false;
       return true;
