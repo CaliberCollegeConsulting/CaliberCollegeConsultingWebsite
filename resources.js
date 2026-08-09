@@ -762,9 +762,9 @@ var SESSIONS = [
   { d: "2026-09-24", c: "Carrollton", s: "GA", t: "Peach State Tour - Carrollton, GA", o: ["University of Georgia", "Augusta University", "Georgia State University", "Georgia Institute of Technology"], m: "6:00 PM · Joshua Mabry Center for the Arts", u: "https://apply.uga.edu/portal/peachstate" },
   { d: "2026-09-24", c: "Milledgeville", s: "GA", t: "Peach State Tour - Milledgeville, GA", o: ["University of Georgia", "Augusta University", "Georgia State University", "Georgia Institute of Technology"], m: "6:00 PM · Baldwin High School", u: "https://apply.uga.edu/portal/peachstate" },
   { d: "2026-10-06", c: "Kennesaw", s: "GA", t: "North Cobb Regional Library Fair", o: "University of Georgia", m: "4:00 PM · North Cobb Regional Library", u: "https://apply.uga.edu/portal/fairs" },
-  { d: "2026-08-20", c: "New York", s: "NY", t: "SMFA @ NYC", o: "Tufts University", m: "4:30 PM · Studio 1418", u: "https://ugrad.admissions.tufts.edu/portal/tufts_roadmap_new?cmd=btn" },
-  { d: "2026-09-19", c: "Charlotte", s: "NC", t: "Charlotte National Portfolio Day", o: "Tufts University", m: "12:00 PM · Mallard Creek High School", u: "https://ugrad.admissions.tufts.edu/portal/tufts_roadmap_new?cmd=btn" },
-  { d: "2026-09-26", c: "Austin", s: "TX", t: "Austin National Portfolio Day", o: "Tufts University", m: "10:00 AM · Norris Conference Centers", u: "https://ugrad.admissions.tufts.edu/portal/tufts_roadmap_new?cmd=btn" },
+  { d: "2026-08-20", c: "New York", s: "NY", t: "SMFA @ NYC", o: "Tufts University", m: "4:30 PM · Studio 1418", u: "https://ugrad.admissions.tufts.edu/register/?id=2771542c-8a21-4b89-b702-774a3d095e0d" },
+  { d: "2026-09-19", c: "Charlotte", s: "NC", t: "Charlotte National Portfolio Day", o: "Tufts University", m: "12:00 PM · Mallard Creek High School", u: "https://ugrad.admissions.tufts.edu/register/?id=3eab4d2e-3a59-4f22-8f8b-914131e7022d" },
+  { d: "2026-09-26", c: "Austin", s: "TX", t: "Austin National Portfolio Day", o: "Tufts University", m: "10:00 AM · Norris Conference Centers", u: "https://ugrad.admissions.tufts.edu/register/?id=93e9e2d4-4e25-49ac-878e-330bd534a0ef" },
 ];
 SESSIONS.forEach(function (ev) {
   if (!Array.isArray(ev.o)) ev.o = [ev.o];
