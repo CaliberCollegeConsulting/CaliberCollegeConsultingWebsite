@@ -613,7 +613,9 @@ var SESSIONS = [
   { d: "2026-11-05", c: "Chesapeake", s: "VA", t: "Tidewater Community College Transfer Fair Chesapeake", o: "Hampden-Sydney College", m: "9:30 AM", u: "https://admission.hsc.edu/portal/travel" },
   { d: "2026-11-05", c: "Virginia Beach", s: "VA", t: "Tidewater Community College Transfer Fair Virginia Beach", o: "Hampden-Sydney College", m: "12:30 PM", u: "https://admission.hsc.edu/portal/travel" },
   { d: "2026-11-06", c: "Alberta", s: "VA", t: "VACRAO Transfer College Fair", o: "Hampden-Sydney College", m: "9:30 AM", u: "https://admission.hsc.edu/portal/travel" },
-  { d: "2026-11-11", c: "Lynchburg", s: "VA", t: "Central Virginia Community College Transfer Fair", o: "Hampden-Sydney College", m: "1:30 PM", u: "https://admission.hsc.edu/portal/travel" }
+  { d: "2026-11-11", c: "Lynchburg", s: "VA", t: "Central Virginia Community College Transfer Fair", o: "Hampden-Sydney College", m: "1:30 PM", u: "https://admission.hsc.edu/portal/travel" },
+  { d: "2026-10-04", c: "Westchester", s: "NY", t: "Westchester, NY Information Session", o: "American University", m: "2:00 PM ET · Westchester Marriott", u: "https://events.blackthorn.io/en/7Q9iTzx7/g/8hh8vHteMS?category=UINF" },
+  { d: "2026-10-11", c: "Boston", s: "MA", t: "Boston Information Session", o: "American University", m: "2:00 PM ET · Boston Marriott Newton", u: "https://events.blackthorn.io/en/7Q9iTzx7/g/8hh8vHteMS?category=UINF" }
 ];
 SESSIONS.forEach(function (ev) {
   if (!Array.isArray(ev.o)) ev.o = [ev.o];
