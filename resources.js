@@ -234,8 +234,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function renderCityFilter(state) {
     cityFilterEl.innerHTML = '';
-    activeCity = 'All';
-    if (!state) return;
+    if (!state) { activeCity = 'All'; return; }
     var cities = [];
     SESSIONS.forEach(function (ev) {
       if (ev.s === state && cities.indexOf(ev.c) === -1) cities.push(ev.c);
