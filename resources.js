@@ -163,7 +163,46 @@ var SESSIONS = [
   { d: "2026-08-31", c: "Richton Park", s: "IL", t: "LAUNCH Collective Info Session", o: ["Cornell University", "Emory University", "Pomona College", "Rice University", "Washington University in St. Louis"], m: "7:00 PM", u: "https://riceadmission.rice.edu/portal/consortium-student" },
   { d: "2026-09-01", c: "St. Louis", s: "MO", t: "LAUNCH Collective Info Session", o: ["Cornell University", "Emory University", "Pomona College", "Rice University", "Washington University in St. Louis"], m: "7:00 PM", u: "https://riceadmission.rice.edu/portal/consortium-student" },
   { d: "2026-09-02", c: "Kansas City", s: "MO", t: "LAUNCH Collective Info Session", o: ["Cornell University", "Emory University", "Pomona College", "Rice University", "Washington University in St. Louis"], m: "7:00 PM", u: "https://riceadmission.rice.edu/portal/consortium-student" },
-  { d: "2026-09-03", c: "Minneapolis", s: "MN", t: "LAUNCH Collective Info Session", o: ["Cornell University", "Emory University", "Pomona College", "Rice University", "Washington University in St. Louis"], m: "7:00 PM · Golden Valley", u: "https://riceadmission.rice.edu/portal/consortium-student" }
+  { d: "2026-09-03", c: "Minneapolis", s: "MN", t: "LAUNCH Collective Info Session", o: ["Cornell University", "Emory University", "Pomona College", "Rice University", "Washington University in St. Louis"], m: "7:00 PM · Golden Valley", u: "https://riceadmission.rice.edu/portal/consortium-student" },
+  { d: "2026-08-09", c: "Plainfield", s: "IL", t: "Information Session", o: "University of Chicago", m: "3:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-08-10", c: "Naperville", s: "IL", t: "Information Session", o: "University of Chicago", m: "6:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-08-11", c: "Buffalo Grove", s: "IL", t: "Information Session", o: "University of Chicago", m: "6:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-08-25", c: "Flossmoor", s: "IL", t: "Information Session (Homewood-Flossmoor)", o: "University of Chicago", m: "6:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-09-10", c: "Anaheim", s: "CA", t: "Information Session", o: "University of Chicago", m: "6:30 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-09-13", c: "Thousand Oaks", s: "CA", t: "Information Session", o: "University of Chicago", m: "2:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-09-14", c: "New York", s: "NY", t: "Information Session (Manhattan)", o: "University of Chicago", m: "7:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-09-15", c: "La Jolla", s: "CA", t: "Information Session", o: "University of Chicago", m: "7:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-09-15", c: "Los Angeles", s: "CA", t: "Information Session", o: "University of Chicago", m: "7:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-09-15", c: "Baltimore", s: "MD", t: "Information Session", o: "University of Chicago", m: "7:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-09-15", c: "South Saint Paul", s: "MN", t: "Information Session (St. Paul)", o: "University of Chicago", m: "6:30 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-09-16", c: "Mineola", s: "NY", t: "Information Session", o: "University of Chicago", m: "7:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-09-17", c: "The Woodlands", s: "TX", t: "Information Session (Spring, TX)", o: "University of Chicago", m: "6:30 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-09-17", c: "Birmingham", s: "AL", t: "Information Session", o: "University of Chicago", m: "6:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-09-17", c: "Pasadena", s: "CA", t: "Information Session", o: "University of Chicago", m: "7:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-09-17", c: "Lexington", s: "KY", t: "Information Session", o: "University of Chicago", m: "5:30 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-09-17", c: "Princeton", s: "NJ", t: "Information Session", o: "University of Chicago", m: "7:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-09-17", c: "Richmond", s: "VA", t: "Information Session", o: "University of Chicago", m: "6:30 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-09-17", c: "Seattle", s: "WA", t: "Information Session", o: "University of Chicago", m: "7:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-09-21", c: "Cincinnati", s: "OH", t: "Information Session", o: "University of Chicago", m: "5:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-09-22", c: "Bethesda", s: "MD", t: "Information Session (Montgomery County)", o: "University of Chicago", m: "7:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-09-23", c: "Washington", s: "DC", t: "Information Session", o: "University of Chicago", m: "7:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-09-23", c: "Rye", s: "NY", t: "Information Session (Westchester)", o: "University of Chicago", m: "7:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-09-23", c: "Philadelphia", s: "PA", t: "Information Session", o: "University of Chicago", m: "7:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-09-23", c: "Madison", s: "WI", t: "Information Session", o: "University of Chicago", m: "6:30 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-10-01", c: "Minneapolis", s: "MN", t: "Information Session", o: "University of Chicago", m: "6:30 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-10-01", c: "Englewood", s: "NJ", t: "Information Session", o: "University of Chicago", m: "7:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-10-04", c: "Bellevue", s: "WA", t: "Information Session", o: "University of Chicago", m: "2:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-10-05", c: "San Antonio", s: "TX", t: "Information Session", o: "University of Chicago", m: "6:30 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-10-05", c: "Alexandria", s: "VA", t: "Information Session", o: "University of Chicago", m: "6:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-10-06", c: "Milwaukee", s: "WI", t: "Information Session", o: "University of Chicago", m: "6:30 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-10-07", c: "Cherry Hill", s: "NJ", t: "Information Session", o: "University of Chicago", m: "7:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-10-07", c: "Buffalo", s: "NY", t: "Information Session", o: "University of Chicago", m: "5:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-10-14", c: "Dallas", s: "TX", t: "Information Session", o: "University of Chicago", m: "6:30 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-10-14", c: "Carlsbad", s: "CA", t: "Information Session", o: "University of Chicago", m: "7:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-10-14", c: "Louisville", s: "KY", t: "Information Session", o: "University of Chicago", m: "6:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-10-14", c: "Bayamon", s: "PR", t: "Applying to Highly Selective Universities (joint w/ Brown & MIT)", o: "University of Chicago", m: "6:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-10-18", c: "Austin", s: "TX", t: "Information Session", o: "University of Chicago", m: "2:00 PM", u: "https://prospects.uchicago.edu/register/" },
+  { d: "2026-10-19", c: "Indianapolis", s: "IN", t: "Information Session", o: "University of Chicago", m: "6:00 PM", u: "https://prospects.uchicago.edu/register/" }
 ];
 
 SESSIONS.forEach(function (ev) {
@@ -173,7 +212,7 @@ SESSIONS.forEach(function (ev) {
 var STATE_NAMES = {
   AL: "Alabama", AZ: "Arizona", AR: "Arkansas", CA: "California", CO: "Colorado",
   CT: "Connecticut", DE: "Delaware", DC: "Washington D.C.", FL: "Florida", GA: "Georgia",
-  HI: "Hawaii", ID: "Idaho", IL: "Illinois", KY: "Kentucky", LA: "Louisiana",
+  HI: "Hawaii", ID: "Idaho", IL: "Illinois", IN: "Indiana", KY: "Kentucky", LA: "Louisiana",
   MD: "Maryland", MA: "Massachusetts", MI: "Michigan", MN: "Minnesota", MO: "Missouri",
   NV: "Nevada", NJ: "New Jersey", NY: "New York", NC: "North Carolina", OH: "Ohio",
   OR: "Oregon", PA: "Pennsylvania", PR: "Puerto Rico", SC: "South Carolina", TN: "Tennessee",
@@ -189,7 +228,8 @@ var ORG_LOGOS = {
   "Vanderbilt University": "https://cdn.vanderbilt.edu/vu-futurevu/static/img/favicons/favicon-on-light.png",
   "Colleges That Change Lives": "https://ctcl.org/wp-content/uploads/2024/07/CTCL-Logo-Downsized.jpg",
   "NACAC College Fairs": "https://assets.swoogo.com/uploads/medium/2173283-6363f8e80192a.png",
-  "University of Michigan": "https://admissions.umich.edu/themes/custom/creative/favicon.ico"
+  "University of Michigan": "https://admissions.umich.edu/themes/custom/creative/favicon.ico",
+  "University of Chicago": "https://collegeadmissions.uchicago.edu/icons/icon-96x96.png?v=ab85f57c99d8bc1cc6297558eb0be637"
 };
 
 document.addEventListener('DOMContentLoaded', function () {
