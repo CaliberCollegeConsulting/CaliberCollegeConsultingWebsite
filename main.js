@@ -17,11 +17,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  var form = document.querySelector('.contact-form');
-  if (form) {
+  var ajaxForms = document.querySelectorAll('.contact-form, .newsletter-form');
+  ajaxForms.forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var msg = document.querySelector('.form-success');
+      var msg = form.parentElement.querySelector('.form-success');
       var data = new FormData(form);
 
       fetch(form.action, {
@@ -41,5 +41,5 @@ document.addEventListener('DOMContentLoaded', function () {
         alert('Something went wrong submitting the form. Please email us directly at alex@amcollegeconsulting.com.');
       });
     });
-  }
+  });
 });
