@@ -1117,6 +1117,22 @@ var SESSIONS = [
   { d: "2026-09-27", c: "Milwaukee", s: "WI", t: "NACAC Fall 26 - Milwaukee", o: "University of Connecticut", m: "11:00 AM", u: "https://connect.uconn.edu/portal/uconn-visits-you" },
   { d: "2026-08-25", c: "Ponce", s: "PR", t: "Ponce College Fair", o: "University of Connecticut", m: "5:00 PM", u: "https://connect.uconn.edu/portal/uconn-visits-you" },
   { d: "2026-08-27", c: "Arecibo", s: "PR", t: "Arecibo College Fair", o: "University of Connecticut", m: "8:30 AM", u: "https://connect.uconn.edu/portal/uconn-visits-you" },
+  { d: "2026-08-24", c: "Walnut Creek", s: "CA", t: "Berean Christian High School Mini College Fair", o: "Southern Methodist University", m: "12:00 PM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-08-24", c: "Concord", s: "CA", t: "Carondelet and De La Salle High Schools Mini College Fair", o: "Southern Methodist University", m: "2:15 PM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-08-31", c: "Danville", s: "CA", t: "The Athenian School College Night", o: "Southern Methodist University", m: "5:30 PM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-09-02", c: "Rohnert Park", s: "CA", t: "Technology High School Mini Fair", o: "Southern Methodist University", m: "10:00 AM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-09-02", c: "Santa Rosa", s: "CA", t: "Cardinal Newman High School Mini College Fair", o: "Southern Methodist University", m: "12:40 PM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-09-15", c: "San Francisco", s: "CA", t: "Saint Ignatius College Preparatory Mini College Fair", o: "Southern Methodist University", m: "11:50 AM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-09-22", c: "Mountain View", s: "CA", t: "Saint Francis High School Mini College Fair", o: "Southern Methodist University", m: "11:05 AM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-09-22", c: "Los Altos", s: "CA", t: "Mountain View Los Altos High School District College Fair", o: "Southern Methodist University", m: "5:00 PM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-09-23", c: "San Jose", s: "CA", t: "Valley Christian High School Mini College Fair", o: "Southern Methodist University", m: "12:45 PM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-09-28", c: "San Jose", s: "CA", t: "Archbishop Mitty High School Mini College Fair", o: "Southern Methodist University", m: "11:30 AM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-10-13", c: "San Jose", s: "CA", t: "Bellarmine College Preparatory Mini College Fair", o: "Southern Methodist University", m: "10:45 AM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-10-13", c: "Burlingame", s: "CA", t: "Mercy High School Mini College Fair", o: "Southern Methodist University", m: "1:30 PM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-10-13", c: "San Mateo", s: "CA", t: "San Mateo County Private High School College Fair", o: "Southern Methodist University", m: "6:30 PM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-10-21", c: "Livermore", s: "CA", t: "Livermore High School Mini College Fair", o: "Southern Methodist University", m: "12:26 PM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-09-27", c: "Saint Louis", s: "MO", t: "2026 West County Private Schools College Fair", o: "Southern Methodist University", m: "2:00 PM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-09-17", c: "Houston", s: "TX", t: "College Fair - Incarnate Word Academy (HARN)", o: "Southern Methodist University", m: "9:00 AM", u: "https://admission.smu.edu/register/" },
 ];
 SESSIONS.forEach(function (ev) {
   if (!Array.isArray(ev.o)) ev.o = [ev.o];
@@ -1207,7 +1223,8 @@ var ORG_LOGOS = {
   "Wabash College": "https://www.wabash.edu/favicon.ico",
   "Whitman College": "https://www.whitman.edu/favicon.ico",
   "Willamette University": "https://www.willamette.edu/favicon.ico",
-  "College of Wooster": "https://www.wooster.edu/favicon.ico"
+  "College of Wooster": "https://www.wooster.edu/favicon.ico",
+  "Southern Methodist University": "https://admission-smu-edu.cdn.technolutions.net/images/smu_logo.png"
 };
 
 document.addEventListener('DOMContentLoaded', function () {
