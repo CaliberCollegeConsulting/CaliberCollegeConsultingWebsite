@@ -2,7 +2,6 @@
 // Each entry: d (ISO date), c (city), s (state code), t (event title),
 // o (host organization), m (meta: time/venue), u (link)
 var SESSIONS = [
-  { d: "2026-08-08", c: "Chicago", s: "IL", t: "Info Session & College Fair", o: ["Colleges That Change Lives", "Agnes Scott College", "Allegheny College", "Austin College", "Bard College", "Beloit College", "Centre College", "Clark University", "Cornell College", "Denison University", "DePauw University", "Earlham College", "Eckerd College", "The Evergreen State College", "Goucher College", "Guilford College", "Hendrix College", "Hillsdale College", "Hiram College", "Hope College", "Juniata College", "Kalamazoo College", "Knox College", "Lawrence University", "Millsaps College", "Oberlin College", "Ohio Wesleyan University", "Reed College", "Rhodes College", "Saint Mary's College of California", "Southwestern University", "St. John's College", "St. Olaf College", "University of Lynchburg", "University of Puget Sound", "University of Redlands", "Ursinus College", "Wabash College", "Whitman College", "Willamette University", "College of Wooster"], m: "40+ member colleges", u: "https://ctcl.org/chicago-il-august-8-2026/" },
   { d: "2026-08-09", c: "Minneapolis", s: "MN", t: "Info Session & College Fair", o: ["Colleges That Change Lives", "Agnes Scott College", "Allegheny College", "Austin College", "Bard College", "Beloit College", "Centre College", "Clark University", "Cornell College", "Denison University", "DePauw University", "Earlham College", "Eckerd College", "The Evergreen State College", "Goucher College", "Guilford College", "Hendrix College", "Hillsdale College", "Hiram College", "Hope College", "Juniata College", "Kalamazoo College", "Knox College", "Lawrence University", "Millsaps College", "Oberlin College", "Ohio Wesleyan University", "Reed College", "Rhodes College", "Saint Mary's College of California", "Southwestern University", "St. John's College", "St. Olaf College", "University of Lynchburg", "University of Puget Sound", "University of Redlands", "Ursinus College", "Wabash College", "Whitman College", "Willamette University", "College of Wooster"], m: "40+ member colleges", u: "https://ctcl.org/minneapolis-mn-august-2026/" },
   { d: "2026-08-10", c: "Denver", s: "CO", t: "Info Session & College Fair", o: ["Colleges That Change Lives", "Agnes Scott College", "Allegheny College", "Austin College", "Bard College", "Beloit College", "Centre College", "Clark University", "Cornell College", "Denison University", "DePauw University", "Earlham College", "Eckerd College", "The Evergreen State College", "Goucher College", "Guilford College", "Hendrix College", "Hillsdale College", "Hiram College", "Hope College", "Juniata College", "Kalamazoo College", "Knox College", "Lawrence University", "Millsaps College", "Oberlin College", "Ohio Wesleyan University", "Reed College", "Rhodes College", "Saint Mary's College of California", "Southwestern University", "St. John's College", "St. Olaf College", "University of Lynchburg", "University of Puget Sound", "University of Redlands", "Ursinus College", "Wabash College", "Whitman College", "Willamette University", "College of Wooster"], m: "40+ member colleges", u: "https://ctcl.org/denver-august-2026/" },
   { d: "2026-08-11", c: "Salt Lake City", s: "UT", t: "Info Session & College Fair", o: ["Colleges That Change Lives", "Agnes Scott College", "Allegheny College", "Austin College", "Bard College", "Beloit College", "Centre College", "Clark University", "Cornell College", "Denison University", "DePauw University", "Earlham College", "Eckerd College", "The Evergreen State College", "Goucher College", "Guilford College", "Hendrix College", "Hillsdale College", "Hiram College", "Hope College", "Juniata College", "Kalamazoo College", "Knox College", "Lawrence University", "Millsaps College", "Oberlin College", "Ohio Wesleyan University", "Reed College", "Rhodes College", "Saint Mary's College of California", "Southwestern University", "St. John's College", "St. Olaf College", "University of Lynchburg", "University of Puget Sound", "University of Redlands", "Ursinus College", "Wabash College", "Whitman College", "Willamette University", "College of Wooster"], m: "40+ member colleges", u: "https://ctcl.org/salt-lake-city-august-11-2026/" },
@@ -1351,11 +1350,12 @@ document.addEventListener('DOMContentLoaded', function () {
   var stateSelect = document.getElementById('state-filter');
   var collegeSelect = document.getElementById('college-filter');
   var cityFilterEl = document.getElementById('city-filter');
+  var cityFilterHintEl = document.getElementById('city-filter-hint');
   var resultsEl = document.getElementById('session-results');
   var emptyEl = document.getElementById('session-empty');
   if (!stateSelect || !collegeSelect || !cityFilterEl || !resultsEl) return;
 
-  var activeCity = 'All';
+  var activeCities = [];
 
   function statesForCollege(college) {
     var subset = college ? SESSIONS.filter(function (ev) { return ev.o.indexOf(college) !== -1; }) : SESSIONS;
@@ -1425,23 +1425,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function renderCityFilter(state) {
     cityFilterEl.innerHTML = '';
-    if (!state) { activeCity = 'All'; return; }
+    if (!state) {
+      activeCities = [];
+      if (cityFilterHintEl) cityFilterHintEl.style.display = 'none';
+      return;
+    }
     var cities = [];
     SESSIONS.forEach(function (ev) {
       if (ev.s === state && cities.indexOf(ev.c) === -1) cities.push(ev.c);
     });
     cities.sort();
     if (cities.length <= 1) {
-      activeCity = 'All';
+      activeCities = [];
+      if (cityFilterHintEl) cityFilterHintEl.style.display = 'none';
       return;
     }
-    if (cities.indexOf(activeCity) === -1) activeCity = 'All';
+    activeCities = activeCities.filter(function (city) { return cities.indexOf(city) !== -1; });
+    if (cityFilterHintEl) cityFilterHintEl.style.display = 'block';
 
     var allPill = document.createElement('span');
-    allPill.className = 'session-filter' + (activeCity === 'All' ? ' active' : '');
+    allPill.className = 'session-filter' + (activeCities.length === 0 ? ' active' : '');
     allPill.textContent = 'All cities';
     allPill.addEventListener('click', function () {
-      activeCity = 'All';
+      activeCities = [];
       renderCityFilter(stateSelect.value);
       renderResults();
     });
@@ -1449,10 +1455,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     cities.forEach(function (city) {
       var pill = document.createElement('span');
-      pill.className = 'session-filter' + (activeCity === city ? ' active' : '');
+      pill.className = 'session-filter' + (activeCities.indexOf(city) !== -1 ? ' active' : '');
       pill.textContent = city;
       pill.addEventListener('click', function () {
-        activeCity = city;
+        var idx = activeCities.indexOf(city);
+        if (idx !== -1) {
+          activeCities.splice(idx, 1);
+        } else {
+          activeCities.push(city);
+        }
         renderCityFilter(stateSelect.value);
         renderResults();
       });
@@ -1466,7 +1477,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var filtered = SESSIONS.filter(function (ev) {
       if (state && ev.s !== state) return false;
       if (college && ev.o.indexOf(college) === -1) return false;
-      if (activeCity !== 'All' && ev.c !== activeCity) return false;
+      if (activeCities.length > 0 && activeCities.indexOf(ev.c) === -1) return false;
       return true;
     });
     filtered.sort(function (a, b) { return a.d.localeCompare(b.d); });
@@ -1500,7 +1511,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var newState = stateSelect.value;
     var college = populateCollegeSelect(newState, collegeSelect.value);
     populateStateSelect(college, newState);
-    activeCity = 'All';
+    activeCities = [];
     renderCityFilter(stateSelect.value);
     renderResults();
   });
@@ -1509,7 +1520,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var newCollege = collegeSelect.value;
     var state = populateStateSelect(newCollege, stateSelect.value);
     populateCollegeSelect(state, newCollege);
-    activeCity = 'All';
+    activeCities = [];
     renderCityFilter(stateSelect.value);
     renderResults();
   });
