@@ -346,18 +346,24 @@ section {
 
 .newsletter-form {
   display: flex;
-  gap: 12px;
-  justify-content: center;
-  max-width: 460px;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 420px;
   margin: 0 auto;
 }
 
-.newsletter-form input[type="email"] {
+.newsletter-form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter-form-row input {
   flex: 1;
+  min-width: 0;
 }
 
 .newsletter-form button {
-  flex-shrink: 0;
+  width: 100%;
 }
 
 .sr-only {
@@ -561,6 +567,16 @@ textarea { resize: vertical; min-height: 120px; }
 }
 
 .signup-box .newsletter-form input[type="email"] {
+  padding: 9px 10px;
+  font-size: 0.85rem;
+}
+
+.signup-box .newsletter-form-row {
+  flex-direction: column;
+  gap: 8px;
+}
+
+.signup-box .newsletter-form-row input {
   padding: 9px 10px;
   font-size: 0.85rem;
 }
@@ -873,7 +889,6 @@ textarea { resize: vertical; min-height: 120px; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .form-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
-  .newsletter-form { flex-direction: column; }
 }
 
 @media (max-width: 500px) {
