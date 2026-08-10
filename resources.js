@@ -1338,7 +1338,7 @@ var ORG_LOGOS = {
   "Ohio Wesleyan University": "https://www.owu.edu/favicon.ico",
   "Reed College": "https://www.reed.edu/favicon.ico",
   "Rhodes College": "https://www.rhodes.edu/favicon.ico",
-  "Saint Mary's College of California": "https://www.stmarys-ca.edu/favicon.ico",
+  "Saint Mary's College of California": "https://www.stmarys-ca.edu/themes/custom/st_marys_college/images/smc-logo-color.png",
   "Southwestern University": "https://www.southwestern.edu/favicon.ico",
   "St. John's College": "https://www.sjc.edu/favicon.ico",
   "St. Olaf College": "https://wp.stolaf.edu/favicon.ico",
