@@ -576,6 +576,12 @@ textarea { resize: vertical; min-height: 120px; }
   object-fit: contain;
 }
 
+/* Baylor's crest SVG renders with extra internal padding, so it looks
+   noticeably smaller than the other logos at the same box size — nudge it up. */
+.session-logo img[src*="bayloruniversity.svg"] {
+  transform: scale(1.35);
+}
+
 .session-date {
   flex-shrink: 0;
   background: var(--navy);
