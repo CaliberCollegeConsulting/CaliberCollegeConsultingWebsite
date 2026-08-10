@@ -28,7 +28,7 @@
 <meta name="twitter:description" content="Find admission info sessions and college fairs happening near you, hosted by colleges and organizations across the country.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260809">
+<link rel="stylesheet" href="styles.css?v=20260810b">
 </head>
 <body>
 
@@ -62,10 +62,23 @@
 
 <section id="info-sessions">
   <div class="container">
-    <div class="section-header">
-      <span class="eyebrow-small">Resource</span>
-      <h2>Admission Reps in Your Area</h2>
-      <p>Colleges and organizations hosting and attending in-person admission events around the country. Always confirm dates on the host's site before attending.</p>
+    <div class="section-header-grid">
+      <div class="section-header-text">
+        <span class="eyebrow-small">Resource</span>
+        <h2>Admission Reps in Your Area</h2>
+        <p>Colleges and organizations hosting and attending in-person admission events around the country. Always confirm dates on the host's site before attending.</p>
+      </div>
+      <div class="signup-box">
+        <h3>Stay in the Loop</h3>
+        <p>Get an email when new admission events are added near you.</p>
+        <p class="form-success" style="display:none; color: var(--gold); font-weight: 600;">Thanks! You're signed up.</p>
+        <form class="newsletter-form" action="https://formspree.io/f/mgognybo" method="POST">
+          <input type="hidden" name="form_type" value="Newsletter signup">
+          <label for="newsletter-email-top" class="sr-only">Email address</label>
+          <input type="email" id="newsletter-email-top" name="email" placeholder="you@example.com" required>
+          <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+      </div>
     </div>
 
     <div class="session-controls">
@@ -155,7 +168,7 @@
   </div>
 </footer>
 
-<script src="main.js?v=20260809"></script>
-<script src="resources.js?v=20260809"></script>
+<script src="main.js?v=20260810b"></script>
+<script src="resources.js?v=20260810b"></script>
 </body>
 </html>
