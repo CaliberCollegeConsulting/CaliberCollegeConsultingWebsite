@@ -1514,7 +1514,7 @@ document.addEventListener('DOMContentLoaded', function () {
     renderResults();
   });
 
-  var initState = populateStateSelect('', 'TX');
+  var initState = populateStateSelect('', '');
   populateCollegeSelect(initState, '');
   renderCityFilter(initState);
   renderResults();
