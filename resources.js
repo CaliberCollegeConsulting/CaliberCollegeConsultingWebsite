@@ -1481,7 +1481,7 @@ document.addEventListener('DOMContentLoaded', function () {
     return { month: month, day: day };
   }
 
-  function renderCityFilter(state) {
+  function renderCityFilter(state, college) {
     cityFilterEl.innerHTML = '';
     if (!state) {
       activeCities = [];
@@ -1490,7 +1490,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     var cities = [];
     SESSIONS.forEach(function (ev) {
-      if (ev.s === state && cities.indexOf(ev.c) === -1) cities.push(ev.c);
+      if (ev.s !== state) return;
+      if (college && ev.o.indexOf(college) === -1) return;
+      if (cities.indexOf(ev.c) === -1) cities.push(ev.c);
     });
     cities.sort();
     if (cities.length <= 1) {
@@ -1506,7 +1508,7 @@ document.addEventListener('DOMContentLoaded', function () {
     allPill.textContent = 'All cities';
     allPill.addEventListener('click', function () {
       activeCities = [];
-      renderCityFilter(stateSelect.value);
+      renderCityFilter(stateSelect.value, collegeSelect.value);
       renderResults();
     });
     cityFilterEl.appendChild(allPill);
@@ -1522,7 +1524,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
           activeCities.push(city);
         }
-        renderCityFilter(stateSelect.value);
+        renderCityFilter(stateSelect.value, collegeSelect.value);
         renderResults();
       });
       cityFilterEl.appendChild(pill);
@@ -1570,7 +1572,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var college = populateCollegeSelect(newState, collegeSelect.value);
     populateStateSelect(college, newState);
     activeCities = [];
-    renderCityFilter(stateSelect.value);
+    renderCityFilter(stateSelect.value, collegeSelect.value);
     renderResults();
   });
 
@@ -1579,12 +1581,12 @@ document.addEventListener('DOMContentLoaded', function () {
     var state = populateStateSelect(newCollege, stateSelect.value);
     populateCollegeSelect(state, newCollege);
     activeCities = [];
-    renderCityFilter(stateSelect.value);
+    renderCityFilter(stateSelect.value, collegeSelect.value);
     renderResults();
   });
 
   var initState = populateStateSelect('', '');
-  populateCollegeSelect(initState, '');
-  renderCityFilter(initState);
+  var initCollege = populateCollegeSelect(initState, '');
+  renderCityFilter(initState, initCollege);
   renderResults();
 });
