@@ -1447,6 +1447,7 @@ var SESSIONS = [
   { d: "2026-10-01", c: "Friendswood", s: "TX", t: "Friendswood ISD & Pearland ISD College Fair", o: "Florida Southern College", m: "6:00 PM", u: "https://admissions.flsouthern.edu/portal/ontheroad?c=&country=" },
   { d: "2026-09-22", c: "Atlanta", s: "GA", t: "Intro to Penn: Atlanta", o: "University of Pennsylvania", m: "Charles R Drew Charter School", u: "https://admissions.upenn.edu/visit-connect/visit-penn/penn-in-your-town" },
   { d: "2026-09-27", c: "Durham", s: "NC", t: "Intro to Penn: Durham", o: "University of Pennsylvania", m: "North Carolina School of Science and Mathematics", u: "https://admissions.upenn.edu/visit-connect/visit-penn/penn-in-your-town" },
+  { d: "2026-08-19", c: "Dallas", s: "TX", t: "Richland Campus Resource Fair", o: "Southern Methodist University", m: "10:00 AM", u: "https://admission.smu.edu/register/" },
 ];
 SESSIONS.forEach(function (ev) {
   if (!Array.isArray(ev.o)) ev.o = [ev.o];
