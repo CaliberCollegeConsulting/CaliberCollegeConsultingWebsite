@@ -205,6 +205,31 @@ img { max-width: 100%; display: block; }
   flex-wrap: wrap;
 }
 
+/* Headshot / photo mosaic */
+.headshot-frame {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 32px rgba(19,42,76,0.18);
+}
+
+.headshot-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.photo-mosaic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.photo-mosaic .headshot-frame {
+  aspect-ratio: 1 / 1;
+}
+
 .page-hero {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
   color: var(--white);
