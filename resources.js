@@ -3941,6 +3941,17 @@ var SESSIONS = [
   { d: "2026-10-19", c: "Irvine", s: "CA", t: "Crean Lutheran High School Mini College Fair", o: "Texas Christian University", m: "12:40 PM", u: "https://apply.tcu.edu/portal/tcutravel" },
   { d: "2026-10-22", c: "El Segundo", s: "CA", t: "Vistamar School Mini Fair", o: "Texas Christian University", m: "1:40 PM", u: "https://apply.tcu.edu/portal/tcutravel" },
   { d: "2026-09-10", c: "Kansas City", s: "MO", t: "Kansas City Private High Schools' College Fair", o: "Texas Christian University", m: "6:30 PM", u: "https://apply.tcu.edu/portal/tcutravel" },
+  { d: "2026-09-13", c: "Atherton", s: "CA", t: "SMU Comes to You: Bay Area", o: "Southern Methodist University", m: "3:30 PM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-09-23", c: "Newport Beach", s: "CA", t: "SMU Comes to You: Orange County", o: "Southern Methodist University", m: "7:00 PM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-09-24", c: "Pasadena", s: "CA", t: "SMU Comes to You: Pasadena", o: "Southern Methodist University", m: "7:00 PM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-10-13", c: "Solana Beach", s: "CA", t: "SMU Comes to You: San Diego", o: "Southern Methodist University", m: "6:00 PM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-09-10", c: "Coral Gables", s: "FL", t: "SMU Comes to You: Miami", o: "Southern Methodist University", m: "6:00 PM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-09-29", c: "Brookline", s: "MA", t: "SMU Comes to You: Boston", o: "Southern Methodist University", m: "6:00 PM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-10-04", c: "Rye", s: "NY", t: "SMU Comes to You: Tri-State", o: "Southern Methodist University", m: "3:30 PM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-09-13", c: "Raleigh", s: "NC", t: "SMU Comes to You: Raleigh", o: "Southern Methodist University", m: "6:00 PM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-09-09", c: "College Station", s: "TX", t: "SMU Comes to You: College Station", o: "Southern Methodist University", m: "6:30 PM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-09-14", c: "Corpus Christi", s: "TX", t: "SMU Comes to You: Corpus Christi", o: "Southern Methodist University", m: "6:00 PM", u: "https://admission.smu.edu/register/" },
+  { d: "2026-09-27", c: "Spring", s: "TX", t: "SMU Comes to You: The Woodlands", o: "Southern Methodist University", m: "6:00 PM", u: "https://admission.smu.edu/register/" },
 ];
 SESSIONS.forEach(function (ev) {
   if (!Array.isArray(ev.o)) ev.o = [ev.o];
