@@ -506,9 +506,8 @@ section {
 
 .article-featured-image img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  object-position: top center;
+  height: auto;
+  display: block;
 }
 
 .article-inline-image {
