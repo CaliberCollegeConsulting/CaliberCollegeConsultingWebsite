@@ -38,13 +38,19 @@
   </url>
   <url>
     <loc>https://amcollegeconsulting.com/blog.html</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://amcollegeconsulting.com/blog-college-fair-season.html</loc>
     <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://amcollegeconsulting.com/blog-4ds-essay-topics.html</loc>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
